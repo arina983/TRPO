@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test.dir/test.cpp.o -o test  -Wl,-rpath,/mnt/c/Users/Ариша/OpenBLAS libgemmtr.a /mnt/c/Users/Ариша/OpenBLAS/libopenblas.so 
