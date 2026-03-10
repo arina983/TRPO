@@ -1,4 +1,0 @@
-/home/arina/arina2/TRPO/gemmtr_BLAS/build/CMakeFiles/gemmtr.dir
-/home/arina/arina2/TRPO/gemmtr_BLAS/build/CMakeFiles/test.dir
-/home/arina/arina2/TRPO/gemmtr_BLAS/build/CMakeFiles/edit_cache.dir
-/home/arina/arina2/TRPO/gemmtr_BLAS/build/CMakeFiles/rebuild_cache.dir

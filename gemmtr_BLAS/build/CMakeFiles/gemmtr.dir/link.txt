@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgemmtr.a CMakeFiles/gemmtr.dir/gemmtr.cpp.o
-/usr/bin/ranlib libgemmtr.a
