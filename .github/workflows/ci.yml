@@ -14,8 +14,13 @@ jobs:
       - name: Install build tools
         run: sudo apt update && sudo apt install -y build-essential
 
-      - name: Compile and run gemmtr tests
+      - name: Compile gemmtr tests
         run: |
           cd gemmtr_BLAS
-          g++ -o test_gemmtr test.cpp gemmtr.cpp
+          g++ -o test_gemmtr test.cpp gemmtr.cpp -lm
+          echo "Compilation successful"
+
+      - name: Run gemmtr tests
+        run: |
+          cd gemmtr_BLAS
           ./test_gemmtr
