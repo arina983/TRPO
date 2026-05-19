@@ -25,7 +25,10 @@ int main() {
     for(int i = 0; i < 4; i++)
         std::cout << C_d[i] << " ";
     std::cout << std::endl;
-
+    if (C_s[0] != 999) {
+        std::cout << "FORCED FAILURE: Expected 999, got " << C_s[0] << std::endl;
+        return 1;
+    }
     return 0;
 
 }
