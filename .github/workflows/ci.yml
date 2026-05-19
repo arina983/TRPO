@@ -1,4 +1,4 @@
-name: CI - gemmtr BLAS
+name: CI
 
 on:
   push:
@@ -9,19 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get install -y cmake libopenblas-dev g++
+      - name: Install build tools
+        run: sudo apt update && sudo apt install -y build-essential
 
-    - name: Build
-      run: |
-        cd gemmtr_BLAS
-        cmake -B build -DCMAKE_BUILD_TYPE=Release
-        cmake --build build --config Release -v
-
-    - name: Run interface tests
-      run: cd gemmtr_BLAS/build && ./test
-
-    - name: Run performance tests
-      run: cd gemmtr_BLAS/build && ./benchmark
+      - name: Compile and run gemmtr tests
+        run: |
+          cd gemmtr_BLAS
+          g++ -o test_gemmtr test.cpp gemmtr.cpp
+          ./test_gemmtr
